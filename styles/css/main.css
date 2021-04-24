@@ -1,0 +1,177 @@
+@import url("https://fonts.googleapis.com/css2?family=Mulish:wght@400;500;700;900&display=swap");
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.6rem;
+  font-weight: 400;
+  color: #ece8e1;
+  background-color: #0f1923;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.heading {
+  font-family: "Mulish", sans-serif;
+  margin: 3rem 0rem;
+  text-align: center;
+}
+
+.controllers {
+  max-width: 320px;
+  display: flex;
+  justify-content: space-around;
+  align-items: stretch;
+  margin: 3rem auto;
+}
+
+.dashboard {
+  max-width: 450px;
+  margin: 0 auto;
+  margin-bottom: 3rem;
+  display: flex;
+  justify-content: space-between;
+}
+.dashboard__tie {
+  font-family: "Mulish", sans-serif;
+  font-weight: 900;
+  text-transform: uppercase;
+  opacity: 0;
+  transition: opacity 0.2s ease;
+}
+.dashboard__player {
+  font-family: "Mulish", sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.dashboard__player--winner {
+  text-transform: uppercase;
+  font-weight: 900;
+  margin-bottom: 1rem;
+  opacity: 0;
+  transition: opacity 0.2s ease;
+}
+.dashboard__player--details {
+  display: flex;
+  border: 1px solid #ece8e1;
+  padding: 1rem 1.5rem;
+  font-size: 1.7rem;
+  font-weight: 700;
+  transition: all 0.2s ease-out;
+}
+.dashboard__player--details.turn {
+  background-color: #ece8e1;
+  color: #0f1923;
+  transform: translateY(-0.15rem);
+  box-shadow: 0 6px 5px rgba(0, 0, 0, 0.7);
+}
+.dashboard__player--details.winner {
+  background-color: #ff4655;
+  color: #ece8e1;
+  transform: translateY(-0.15rem);
+  box-shadow: 0 6px 5px rgba(0, 0, 0, 0.7);
+  border-color: #ff4655;
+}
+.dashboard__player--details-mark, .dashboard__player--details-name, .dashboard__player--details-dash {
+  margin-right: 1rem;
+}
+.board {
+  max-width: 375px;
+  height: 375px;
+  margin: 0 auto;
+  display: flex;
+  flex-flow: row wrap;
+}
+.board__square {
+  font-family: "Mulish", sans-serif;
+  font-size: 5rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  width: 33.333%;
+  height: 33.333%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid #ece8e1;
+  cursor: pointer;
+}
+.board__square:hover {
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.btn {
+  border: 0.5px solid #ece8e1;
+  background-color: transparent;
+  padding: 0.5rem 1rem;
+  position: relative;
+  z-index: 1;
+  cursor: pointer;
+}
+.btn:focus {
+  outline: none;
+}
+.btn:hover .btn__group::after {
+  left: -15%;
+}
+.btn:hover .btn__text {
+  color: #ece8e1;
+}
+.btn::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 120%;
+  height: 0.8rem;
+  z-index: 2;
+  background-color: #0f1923;
+}
+.btn__group {
+  position: relative;
+  overflow: hidden;
+  padding: 1rem 2.2rem;
+  z-index: 3;
+}
+.btn__group::after {
+  content: "";
+  position: absolute;
+  width: 150%;
+  height: 100%;
+  top: 0;
+  left: -170%;
+  transform: skewX(-30deg);
+  background-color: #ff4655;
+  transition: left 0.5s ease-out;
+}
+.btn__text {
+  font-family: "Mulish", sans-serif;
+  font-weight: 900;
+  font-size: 1.4rem;
+  text-transform: uppercase;
+  position: relative;
+  z-index: 10;
+}
+.btn__alert {
+  color: #ff4655;
+  border: 0.5px solid #ff4655;
+}
+.btn__main {
+  color: #0f1923;
+  background-color: #ece8e1;
+}
+
+/*# sourceMappingURL=main.css.map */

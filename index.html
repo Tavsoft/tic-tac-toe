@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tic Tac Toe</title>
+    <link rel="stylesheet" href="styles/css/main.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1 class="heading">Tic-Tac-Toe</h1>
+      <!-- Players Dashboard -->
+      <div class="dashboard">
+        <div class="dashboard__player playerx">
+          <div class="dashboard__player--winner">Winner!</div>
+          <div class="dashboard__player--details">
+            <div class="dashboard__player--details-mark">X</div>
+            <div class="dashboard__player--details-name">Player 1</div>
+            <div class="dashboard__player--details-dash">-</div>
+            <div class="dashboard__player--details-score">0</div>
+          </div>
+        </div>
+        <div class="dashboard__tie">Tie!</div>
+        <div class="dashboard__player playero">
+          <div class="dashboard__player--winner">Winner!</div>
+          <div class="dashboard__player--details">
+            <div class="dashboard__player--details-mark">O</div>
+            <div class="dashboard__player--details-name">Player 2</div>
+            <div class="dashboard__player--details-dash">-</div>
+            <div class="dashboard__player--details-score">0</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Game Board -->
+      <div class="board">
+        <div class="board__square" data-index="0"></div>
+        <div class="board__square" data-index="1"></div>
+        <div class="board__square" data-index="2"></div>
+        <div class="board__square" data-index="3"></div>
+        <div class="board__square" data-index="4"></div>
+        <div class="board__square" data-index="5"></div>
+        <div class="board__square" data-index="6"></div>
+        <div class="board__square" data-index="7"></div>
+        <div class="board__square" data-index="8"></div>
+      </div>
+
+      <!-- controllers for reset and play again -->
+      <div class="controllers">
+        <button class="btn">
+          <div class="btn__group btn__alert reset">
+            <p class="btn__text">reset</p>
+          </div>
+        </button>
+        <button class="btn">
+          <div class="btn__group btn__main next-round">
+            <p class="btn__text">next round</p>
+          </div>
+        </button>
+      </div>
+    </div>
+    <script src="script/app.js"></script>
+  </body>
+</html>
